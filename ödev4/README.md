@@ -13,9 +13,13 @@ Aşağıdaki sorgu senaryolarını dvdrental örnek veri tabanı üzerinden ger�
 ## Cevaplar
 
 1.  
-····# SELECT DISTINCT replacement_cost FROM film;
+```
+ SELECT DISTINCT replacement_cost FROM film;
+ ```
 2. 
-····# SELECT COUNT( DISTINCT replacement_cost ) FROM film;
+```
+SELECT COUNT( DISTINCT replacement_cost ) FROM film;
+```
 (21)
 3. 
 ```
