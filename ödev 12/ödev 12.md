@@ -13,34 +13,35 @@ Aşağıdaki sorgu senaryolarını dvdrental örnek veri tabanı üzerinden ger�
 ## Cevaplar
 1. Soru
 
+``` sql
 select count(*) from film 
 where length  > 
 (
 select avg(length ) from film
 );
 -- 489
-
+```
 2. Soru
-
+``` sql
 select count(*) from film 
 where rental_rate = (
 select max(rental_rate) from film
 );
-
+```
  3. Soru
-
+``` sql
 select * from film 
 where rental_rate = 
 ( select min(rental_rate) from film) 
 and replacement_cost = 
 (select min( replacement_cost) from film);
-
+```
  4. Soru
-
+``` sql
 SELECT customer_id, COUNT(*) AS mostPayments FROM payment
 GROUP BY customer_id
 ORDER BY most_payments DESC;
-
+```
 
 
 
